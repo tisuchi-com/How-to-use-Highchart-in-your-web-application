@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to use High Chart in your web application?</title>
+    
+    
+    
+    <!--
+        adding jquery required file.
+    -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
+    
+<body>
+    
+    
+<!--
+    Setting properties of your graph. This is based on jquery. In this case, I prefer you to have general knowledge about jQuery. 
+-->
+<script type="text/javascript">
+$(function () {
+    /* showing data in our specific div */
+        $('#container').highcharts({
+            chart: {
+                /* types of data representation*/
+                type: 'column'
+            },
+            /* Title of that grap */
+            title: {
+                text: 'Highchart tutorial from tisuchi.com'
+            },
+            
+            /* label of X-Axis */
+            xAxis: {
+                categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+            },
+            
+            /* label of Y-Axis */
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Total fruit consumption'
+                },
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                    }
+                }
+            },
+            /* Setting the legend properties in a graph */
+            legend: {
+                align: 'right',
+                x: -70,
+                verticalAlign: 'top',
+                y: 20,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                borderColor: '#CCC',
+                borderWidth: 1,
+                shadow: false
+            },
+            
+            /* setting tooltip */
+            tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.x +'</b><br/>'+
+                        this.series.name +': '+ this.y +'<br/>'+
+                        'Total: '+ this.point.stackTotal;
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                        style: {
+                            textShadow: '0 0 3px black, 0 0 3px black'
+                        }
+                    }
+                }
+            },
+            
+            /* Data that we want to represent in graph */
+            series: [{
+                /* Name of the person */
+                name: 'Ava',
+                /* Amount of Data */
+                data: [5, 3, 4, 7, 2]
+            }, {
+                name: 'Prova',
+                data: [2, 2, 3, 2, 1]
+            }, {
+                name: 'Naba',
+                data: [3, 4, 4, 2, 5]
+            }]
+        });
+    });
+    
+
+		</script>
+    
+    
+    
+    
+    
+<!--
+    Adding required files for highcharts    
+-->
+
+<script src="js/highcharts.js"></script>
+<script src="js/exporting.js"></script>
+
+    
+
+    
+<!--
+    Adding DIV where we will represent our data. Based on your web place, you can reshape your div shape.    
+-->
+    
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    
+    
+    
+</body>
+</html>
