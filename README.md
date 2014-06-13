@@ -6,9 +6,9 @@ Highchart is a Java Script Library developed by Highsoft AS. Its totally dedicat
 Why High Chart?
 ============================================
 By using highchart, it is easy to represent information in 3 basic categories such as-
-*High Chart
-*High Stocks
-*High Maps
+1. High Chart
+2. High Stocks
+3. High Maps
 
 This tutorial is representing the highchart particularly. How to use highchart, how to intergrated that great library in your web application? And so on.
 Before going to download, there is a basic question that why you will consider Highchart? What is the speciallity of Highchart? Sure enough that justifing these questions will help you to understand the importance of highcharts. Well, in this case, it will not give you only chart creating options, beside that, it helps you to download that graph with different types of format such as png or jpeg or pdf or svg vector. No doubt that, it is one of the best choose for web apps developer nowadays although it is not open source. 
@@ -26,8 +26,8 @@ Now digg into Highchart folder. Sure enough that you will get few folders and 1 
 
 Now, create new directory in your computer. I am doing in desktop and called that directory is highchart. Inside that folder, I am creating 1 folder called js and one html file called index.html. The directory is looks like-
 [ highchart ]
-  [ js ]
-  Index.html
+    [ js ]
+    Index.html
 
 Now, copy two files from your highchart upzipped folder. Just copy from following directory-
 js/highcharts.js
