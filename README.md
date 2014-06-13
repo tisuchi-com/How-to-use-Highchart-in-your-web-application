@@ -35,4 +35,4 @@ js/modules/exporting.js
 
 
 
-To know more, visit 
+To know more, visit http://tisuchi.com/how-to-use-highchart-in-your-web-application/
